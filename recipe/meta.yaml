@@ -1,6 +1,6 @@
 {% set name = "python-gmatelastoplastic" %}
-{% set version = "0.0.5" %}
-{% set sha256 = "269b9c6ac9cfb8677292eba7868045719fee8ff68427c8a0922436366b27b857" %}
+{% set version = "0.1.0" %}
+{% set sha256 = "e66347d1c1e596da67069f618752585d94e4dca10fcb3a11cef5232d1fdf7d8a" %}
 
 package:
   name: {{ name|lower }}
