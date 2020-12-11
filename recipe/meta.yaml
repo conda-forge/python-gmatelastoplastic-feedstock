@@ -1,6 +1,6 @@
 {% set name = "python-gmatelastoplastic" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "e66347d1c1e596da67069f618752585d94e4dca10fcb3a11cef5232d1fdf7d8a" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "dae10130d34b4ecb17dae0eed17cdc96f6f008c0b93a24a086f0793d7372823b" %}
 
 package:
   name: {{ name|lower }}
@@ -11,9 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -23,6 +22,8 @@ requirements:
     - setuptools
     - pip
     - pyxtensor
+    - gmattensor
+    - gmatelastic
   run:
     - python
 
@@ -35,8 +36,8 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Elasto-plastic material model (Python wrapper).'
-  description: 'Elasto-plastic material model (Python wrapper).'
+  summary: Elasto-plastic material model (Python wrapper).
+  description: Elasto-plastic material model (Python wrapper).
   doc_url: https://github.com/tdegeus/GMatElastoPlastic
   dev_url: https://github.com/tdegeus/GMatElastoPlastic
 
